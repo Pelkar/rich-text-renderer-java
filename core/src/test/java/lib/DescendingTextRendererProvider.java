@@ -20,7 +20,7 @@ public class DescendingTextRendererProvider {
         (context, node) -> node instanceof CDARichParagraph,
         (context, node) -> {
           final CDARichParagraph block = (CDARichParagraph) node;
-          return "--" + block.getContent().stream().map(innerBlock -> processor.process(context, innerBlock)).collect(Collectors.joining()) + "\n";
+          return "--" + block.getContent().stream().map(innerBlock -> processor.process(context, innerBlock)).collect(Collectors.joining());
         }
     );
   }
